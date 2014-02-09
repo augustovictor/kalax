@@ -21,7 +21,7 @@
 			<?php echo h($product['Product']['name']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Image Path'); ?></dt>
+		<dt><?php if($product['Product']['image_path']) echo $this->Html->image($product['Product']['image_path']); ?></dt>
 		<dd>
 			<?php echo h($product['Product']['image_path']); ?>
 			&nbsp;

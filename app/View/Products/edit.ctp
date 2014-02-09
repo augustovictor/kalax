@@ -1,5 +1,5 @@
 <div class="products form">
-<?php echo $this->Form->create('Product'); ?>
+<?php echo $this->Form->create('Product', array('type' => 'file')); ?>
 	<fieldset>
 		<legend><?php echo __('Edit Product'); ?></legend>
 	<?php
@@ -7,7 +7,7 @@
 		echo $this->Form->input('position');
 		echo $this->Form->input('visible');
 		echo $this->Form->input('name');
-		echo $this->Form->input('image_path');
+		echo $this->Form->file('image_path', array('type' => 'file'));
 		echo $this->Form->input('description');
 		echo $this->Form->input('category_id');
 		echo $this->Form->input('prod_link');

@@ -48,7 +48,11 @@ class ProductsController extends AppController {
 	public function add() {
 		if ($this->request->is('post')) {
 			$this->Product->create();
-			if ($this->Product->save($this->request->data)) {
+			$data = $this->request->data['Product'];
+
+			if(!$data['image_path']['name']) unset($data['image_path']); 
+
+			if ($this->Product->save($data)) {
 				$this->Session->setFlash(__('The product has been saved.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
@@ -71,7 +75,11 @@ class ProductsController extends AppController {
 			throw new NotFoundException(__('Invalid product'));
 		}
 		if ($this->request->is(array('post', 'put'))) {
-			if ($this->Product->save($this->request->data)) {
+			$data = $this->request->data['Product'];
+
+			if(!$data['image_path']['name']) unset($data['image_path']); 
+			
+			if ($this->Product->save($data)) {
 				$this->Session->setFlash(__('The product has been saved.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
