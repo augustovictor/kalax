@@ -1,47 +1,36 @@
 <div class="products view">
 <h2><?php echo __('Product'); ?></h2>
-	<dl>
-		<dt><?php echo __('Id'); ?></dt>
-		<dd>
-			<?php echo h($product['Product']['id']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Position'); ?></dt>
-		<dd>
-			<?php echo h($product['Product']['position']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Visible'); ?></dt>
-		<dd>
+
+		<p>
+			<strong><?php echo __('Visible'); ?></strong>
+			<br>
 			<?php echo h($product['Product']['visible']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Name'); ?></dt>
-		<dd>
+		</p>
+		<p>
+			<strong><?php echo __('Name'); ?></strong>
+			<br>
 			<?php echo h($product['Product']['name']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php if($product['Product']['image_path']) echo $this->Html->image($product['Product']['image_path']); ?></dt>
-		<dd>
-			<?php echo h($product['Product']['image_path']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Description'); ?></dt>
-		<dd>
+		</p>
+		<p>
+			<strong><?php echo __('Image'); ?></strong>
+			<br>
+			<strong><?php if($product['Product']['image_path']) echo $this->Html->image($product['Product']['image_path']); ?></strong>
+		</p>
+		<p>
+			<strong><?php echo __('Description'); ?></strong>
+			<br>
 			<?php echo h($product['Product']['description']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Category'); ?></dt>
-		<dd>
+		</p>
+		<p>
+			<strong><?php echo __('Category'); ?></strong>
+			<br>
 			<?php echo $this->Html->link($product['Category']['category_name'], array('controller' => 'categories', 'action' => 'view', $product['Category']['id'])); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Prod Link'); ?></dt>
-		<dd>
+		</p>
+		<p>
+			<strong><?php echo __('Prod Link'); ?></strong>
+			<br>
 			<?php echo h($product['Product']['prod_link']); ?>
-			&nbsp;
-		</dd>
-	</dl>
+		</p>
 </div>
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>

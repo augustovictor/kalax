@@ -1,80 +1,87 @@
 <div class="jobs view">
 <h2><?php echo __('Job'); ?></h2>
-	<dl>
-		<dt><?php echo __('Id'); ?></dt>
-		<dd>
-			<?php echo h($job['Job']['id']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Job Visible'); ?></dt>
-		<dd>
+
+		<p>
+			<strong><?php echo __('Job Visible'); ?></strong>
+		<br>
 			<?php echo h($job['Job']['job_visible']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Job Title'); ?></dt>
-		<dd>
+		</p>
+
+		<p>
+			<strong><?php echo __('Job Title'); ?></strong>
+		<br>
 			<?php echo h($job['Job']['job_title']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Job Discipline'); ?></dt>
-		<dd>
+		</p>
+
+		<p>
+			<strong><?php echo __('Job Discipline'); ?></strong>
+		<br>
 			<?php echo h($job['Job']['job_discipline']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Job Vacancies'); ?></dt>
-		<dd>
+		</p>
+
+		<p>
+			<strong><?php echo __('Job Vacancies'); ?></strong>
+		<br>
 			<?php echo h($job['Job']['job_vacancies']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Job Deadline'); ?></dt>
-		<dd>
+		</p>
+
+		<p>
+			<strong><?php echo __('Job Deadline'); ?></strong>
+		<br>
 			<?php echo h($job['Job']['job_deadline']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Job Location'); ?></dt>
-		<dd>
+		</p>
+
+		<p>
+			<strong><?php echo __('Job Location'); ?></strong>
+		<br>
 			<?php echo h($job['Job']['job_location']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Job Start Date'); ?></dt>
-		<dd>
+		</p>
+
+		<p>
+			<strong><?php echo __('Job Start Date'); ?></strong>
+		<br>
 			<?php echo h($job['Job']['job_start_date']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Job Term'); ?></dt>
-		<dd>
+		</p>
+
+		<p>
+			<strong><?php echo __('Job Term'); ?></strong>
+		<br>
 			<?php echo h($job['Job']['job_term']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Job Hourly Rate'); ?></dt>
-		<dd>
+		</p>
+
+		<p>
+			<strong><?php echo __('Job Hourly Rate'); ?></strong>
+		<br>
 			<?php echo h($job['Job']['job_hourly_rate']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Job Hours'); ?></dt>
-		<dd>
+		</p>
+
+		<p>
+			<strong><?php echo __('Job Hours'); ?></strong>
+		<br>
 			<?php echo h($job['Job']['job_hours']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Job Description'); ?></dt>
-		<dd>
+		</p>
+
+		<p>
+			<strong><?php echo __('Job Description'); ?></strong>
+		<br>
 			<?php echo h($job['Job']['job_description']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Job Skills'); ?></dt>
-		<dd>
+		</p>
+
+		<p>
+			<strong><?php echo __('Job Skills'); ?></strong>
+		<br>
 			<?php echo h($job['Job']['job_skills']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Job Key Requirements'); ?></dt>
-		<dd>
+		</p>
+
+		<p>
+			<strong><?php echo __('Job Key Requirements'); ?></strong>
+		<br>
 			<?php echo h($job['Job']['job_key_requirements']); ?>
-			&nbsp;
-		</dd>
-	</dl>
+		</p>
+
 </div>
 <div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
+<strong>	<h3><?php echo __('Actions'); ?></h3></strong>
 	<ul>
 		<li><?php echo $this->Html->link(__('Edit Job'), array('action' => 'edit', $job['Job']['id'])); ?> </li>
 		<li><?php echo $this->Form->postLink(__('Delete Job'), array('action' => 'delete', $job['Job']['id']), null, __('Are you sure you want to delete # %s?', $job['Job']['id'])); ?> </li>

@@ -1,42 +1,41 @@
 <div class="qualifications view">
 <h2><?php echo __('Qualification'); ?></h2>
-	<dl>
-		<dt><?php echo __('Id'); ?></dt>
-		<dd>
-			<?php echo h($qualification['Qualification']['id']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Qualification Position'); ?></dt>
-		<dd>
+		<p>
+			<strong><?php echo __('Qualification Position'); ?></strong>
+			<br>
 			<?php echo h($qualification['Qualification']['qualification_position']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Qualification Visible'); ?></dt>
-		<dd>
+		</p>
+
+		<p>
+			<strong><?php echo __('Qualification Visible'); ?></strong>
+			<br>
 			<?php echo h($qualification['Qualification']['qualification_visible']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Qualification Path'); ?></dt>
-		<dd>
+		</p>
+
+		<p>
+			<strong><?php echo __('Qualification Path'); ?></strong>
+			<br>
 			<?php echo h($qualification['Qualification']['qualification_path']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Qualification Name'); ?></dt>
-		<dd>
+		</p>
+
+		<p>
+			<strong><?php echo __('Qualification Name'); ?></strong>
+			<br>
 			<?php echo h($qualification['Qualification']['qualification_name']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Qualification Role'); ?></dt>
-		<dd>
+		</p>
+
+		<p>
+			<strong><?php echo __('Qualification Role'); ?></strong>
+			<br>
 			<?php echo h($qualification['Qualification']['qualification_role']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Qualification Description'); ?></dt>
-		<dd>
+		</p>
+
+		<p>
+			<strong><?php echo __('Qualification Description'); ?></strong>
+			<br>
 			<?php echo h($qualification['Qualification']['qualification_description']); ?>
-			&nbsp;
-		</dd>
-	</dl>
+		</p>
+
 </div>
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>

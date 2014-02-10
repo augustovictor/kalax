@@ -1,17 +1,10 @@
 <div class="businesses view">
 <h2><?php echo __('Business'); ?></h2>
-	<dl>
-		<dt><?php echo __('Id'); ?></dt>
-		<dd>
-			<?php echo h($business['Business']['id']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Title'); ?></dt>
-		<dd>
+		<p>
+			<strong><?php echo __('Title'); ?></strong>
+			<br>
 			<?php echo h($business['Business']['title']); ?>
-			&nbsp;
-		</dd>
-	</dl>
+		</p>
 </div>
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>

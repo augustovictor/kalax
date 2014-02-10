@@ -4,7 +4,6 @@
 		<legend><?php echo __('Edit Product'); ?></legend>
 	<?php
 		echo $this->Form->input('id');
-		echo $this->Form->input('position');
 		echo $this->Form->input('visible');
 		echo $this->Form->input('name');
 		echo $this->Form->file('image_path', array('type' => 'file'));

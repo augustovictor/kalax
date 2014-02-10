@@ -3,7 +3,6 @@
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
-			<th><?php echo $this->Paginator->sort('position'); ?></th>
 			<th><?php echo $this->Paginator->sort('visible'); ?></th>
 			<th><?php echo $this->Paginator->sort('name'); ?></th>
 			<th><?php echo $this->Paginator->sort('image_path'); ?></th>
@@ -15,7 +14,6 @@
 	<?php foreach ($products as $product): ?>
 	<tr>
 		<td><?php echo h($product['Product']['id']); ?>&nbsp;</td>
-		<td><?php echo h($product['Product']['position']); ?>&nbsp;</td>
 		<td><?php echo h($product['Product']['visible']); ?>&nbsp;</td>
 		<td><?php echo h($product['Product']['name']); ?>&nbsp;</td>
 		<td><?php echo h($product['Product']['image_path']); ?>&nbsp;</td>

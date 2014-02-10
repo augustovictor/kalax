@@ -1,37 +1,30 @@
 <div class="events view">
 <h2><?php echo __('Event'); ?></h2>
-	<dl>
-		<dt><?php echo __('Id'); ?></dt>
-		<dd>
-			<?php echo h($event['Event']['id']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Event Visible'); ?></dt>
-		<dd>
+		<p>
+			<strong><?php echo __('Event Visible'); ?></strong>
+			<br>
 			<?php echo h($event['Event']['event_visible']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Event Position'); ?></dt>
-		<dd>
+		</p>
+		<p>
+			<strong><?php echo __('Event Position'); ?></strong>
+			<br>
 			<?php echo h($event['Event']['event_position']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Event Pic Name'); ?></dt>
-		<dd>
+		</p>
+		<p>
+			<strong><?php echo __('Event Pic Name'); ?></strong>
+			<br>
 			<?php echo h($event['Event']['event_pic_name']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Event Path'); ?></dt>
-		<dd>
+		</p>
+		<p>
+			<strong><?php echo __('Event Path'); ?></strong>
+			<br>
 			<?php echo h($event['Event']['event_path']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Event Description'); ?></dt>
-		<dd>
+		</p>
+		<p>
+			<strong><?php echo __('Event Description'); ?></strong>
+			<br>
 			<?php echo h($event['Event']['event_description']); ?>
-			&nbsp;
-		</dd>
-	</dl>
+		</p>
 </div>
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>

@@ -1,17 +1,15 @@
 <div class="roles view">
 <h2><?php echo __('Role'); ?></h2>
-	<dl>
-		<dt><?php echo __('Id'); ?></dt>
-		<dd>
+		<p>
+			<strong><?php echo __('Id'); ?></strong>
+			<br>
 			<?php echo h($role['Role']['id']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Title'); ?></dt>
-		<dd>
+		</p>
+		<p>
+			<strong><?php echo __('Title'); ?></strong>
+			<br>
 			<?php echo h($role['Role']['title']); ?>
-			&nbsp;
-		</dd>
-	</dl>
+		</p>
 </div>
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>

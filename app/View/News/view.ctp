@@ -1,32 +1,25 @@
 <div class="news view">
 <h2><?php echo __('News'); ?></h2>
-	<dl>
-		<dt><?php echo __('Id'); ?></dt>
-		<dd>
-			<?php echo h($news['News']['id']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('New Title'); ?></dt>
-		<dd>
+		<p>
+			<strong><?php echo __('New Title'); ?></strong>
+			<br>
 			<?php echo h($news['News']['new_title']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('New Content'); ?></dt>
-		<dd>
+		</p>
+		<p>
+			<strong><?php echo __('New Content'); ?></strong>
+			<br>
 			<?php echo h($news['News']['new_content']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('New Visible'); ?></dt>
-		<dd>
+		</p>
+		<p>
+			<strong><?php echo __('New Visible'); ?></strong>
+			<br>
 			<?php echo h($news['News']['new_visible']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('New Created In'); ?></dt>
-		<dd>
+		</p>
+		<p>
+			<strong><?php echo __('New Created In'); ?></strong>
+			<br>
 			<?php echo h($news['News']['new_created_in']); ?>
-			&nbsp;
-		</dd>
-	</dl>
+		</p>
 </div>
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>

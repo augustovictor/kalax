@@ -3,7 +3,6 @@
 	<fieldset>
 		<legend><?php echo __('Add Product'); ?></legend>
 	<?php
-		echo $this->Form->input('position');
 		echo $this->Form->input('visible');
 		echo $this->Form->input('name');
 		echo $this->Form->input('image_path', array('type' => 'file'));

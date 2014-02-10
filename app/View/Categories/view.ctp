@@ -1,22 +1,17 @@
 <div class="categories view">
 <h2><?php echo __('Category'); ?></h2>
-	<dl>
-		<dt><?php echo __('Id'); ?></dt>
-		<dd>
-			<?php echo h($category['Category']['id']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Category Name'); ?></dt>
-		<dd>
+		<p>
+			<strong><?php echo __('Category Name'); ?></strong>
+			<br>
 			<?php echo h($category['Category']['category_name']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Business'); ?></dt>
-		<dd>
+		</p>
+		
+		<p>
+			<strong><?php echo __('Business'); ?></strong>
+			<br>
 			<?php echo $this->Html->link($category['Business']['title'], array('controller' => 'businesses', 'action' => 'view', $category['Business']['id'])); ?>
-			&nbsp;
-		</dd>
-	</dl>
+		</p>
+		
 </div>
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
@@ -37,7 +32,6 @@
 	<table cellpadding = "0" cellspacing = "0">
 	<tr>
 		<th><?php echo __('Id'); ?></th>
-		<th><?php echo __('Position'); ?></th>
 		<th><?php echo __('Visible'); ?></th>
 		<th><?php echo __('Name'); ?></th>
 		<th><?php echo __('Image Path'); ?></th>
@@ -49,7 +43,6 @@
 	<?php foreach ($category['Product'] as $product): ?>
 		<tr>
 			<td><?php echo $product['id']; ?></td>
-			<td><?php echo $product['position']; ?></td>
 			<td><?php echo $product['visible']; ?></td>
 			<td><?php echo $product['name']; ?></td>
 			<td><?php echo $product['image_path']; ?></td>
