@@ -48,7 +48,12 @@ class QualificationsController extends AppController {
 	public function add() {
 		if ($this->request->is('post')) {
 			$this->Qualification->create();
-			if ($this->Qualification->save($this->request->data)) {
+
+			$data = $this->request->data['Qualification'];
+
+			if(!$data['qualification_path']['name']) unset($data['qualification_path']);
+
+			if ($this->Qualification->save($data)) {
 				$this->Session->setFlash(__('The qualification has been saved.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
@@ -69,7 +74,12 @@ class QualificationsController extends AppController {
 			throw new NotFoundException(__('Invalid qualification'));
 		}
 		if ($this->request->is(array('post', 'put'))) {
-			if ($this->Qualification->save($this->request->data)) {
+
+			$data = $this->request->data['Qualification'];
+
+			if(!$data['qualification_path']['name']) unset($data['qualification_path']);
+
+			if ($this->Qualification->save($data)) {
 				$this->Session->setFlash(__('The qualification has been saved.'));
 				return $this->redirect(array('action' => 'index'));
 			} else {

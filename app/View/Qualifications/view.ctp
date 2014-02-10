@@ -15,7 +15,7 @@
 		<p>
 			<strong><?php echo __('Qualification Path'); ?></strong>
 			<br>
-			<?php echo h($qualification['Qualification']['qualification_path']); ?>
+			<?php echo $this->Html->image(h($qualification['Qualification']['qualification_path'])); ?>
 		</p>
 
 		<p>
