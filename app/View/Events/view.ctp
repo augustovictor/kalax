@@ -18,7 +18,7 @@
 		<p>
 			<strong><?php echo __('Event Path'); ?></strong>
 			<br>
-			<?php echo h($event['Event']['event_path']); ?>
+			<?php echo $this->Html->image(h($event['Event']['event_path'])); ?>
 		</p>
 		<p>
 			<strong><?php echo __('Event Description'); ?></strong>

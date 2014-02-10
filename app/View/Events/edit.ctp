@@ -1,5 +1,5 @@
 <div class="events form">
-<?php echo $this->Form->create('Event'); ?>
+<?php echo $this->Form->create('Event', array('type' => 'file')); ?>
 	<fieldset>
 		<legend><?php echo __('Edit Event'); ?></legend>
 	<?php
@@ -7,7 +7,7 @@
 		echo $this->Form->input('event_visible');
 		echo $this->Form->input('event_position');
 		echo $this->Form->input('event_pic_name');
-		echo $this->Form->input('event_path');
+		echo $this->Form->input('event_path', array('type' => 'file'));
 		echo $this->Form->input('event_description');
 	?>
 	</fieldset>

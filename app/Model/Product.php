@@ -118,5 +118,5 @@ class Product extends AppModel {
 		$this->data['Product']['image_path'] = 'uploads' . DS . $check['image_path']['name'];
 		return true;
 	}
-	// End processImage
+	// End processImageUpload
 }
