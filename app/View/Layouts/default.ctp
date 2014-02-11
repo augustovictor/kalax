@@ -32,7 +32,6 @@ $cakeDescription = __d('cake_dev', 'Kalax');
 		echo $this->Html->css('cake.generic');
 
 		echo $this->fetch('meta');
-	    echo $this->Bootstrap->css();
 		echo $this->fetch('script');
 	    echo $this->Bootstrap->load();
 
@@ -40,9 +39,9 @@ $cakeDescription = __d('cake_dev', 'Kalax');
 </head>
 <body>
 	<div id="container">
-		<div class="navbar">
+		<div class="navbar navbar-inverse">
 			<div class="navbar-inner">
-				<a class="brand" href="#">Kalax Computer Systems - Admin</a>
+				<?php echo $this->Html->link(__('Kalax Computer Systems - Admin'), array('controller' => 'services', 'action' => 'index'), array('class' => 'brand')) ?>
 				<ul class="nav">
 					<?php if (AuthComponent::user()): ?>
 						<li><?php echo $this->Html->link(__('Services'), array('controller' => 'services', 'action' => 'index')); ?></li>
@@ -56,7 +55,7 @@ $cakeDescription = __d('cake_dev', 'Kalax');
 					<li>
 						<?php 
 							if (AuthComponent::user()) {
-								echo 'Hello, ' . AuthComponent::user('username');
+								echo '<strong>Hello, ' . AuthComponent::user('username') . '</strong>';
 								echo $this->Html->link(__('Logout'), array('controller' => 'users', 'action' => 'logout')); 
 							} 
 						?>
