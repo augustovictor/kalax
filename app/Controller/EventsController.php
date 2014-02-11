@@ -8,6 +8,14 @@ App::uses('AppController', 'Controller');
  */
 class EventsController extends AppController {
 
+	public function isAuthorized($user) {
+		if (isset($this->action)) {
+			return true;
+		}
+
+		return parent::isAuthorized($user);
+	}
+
 /**
  * Components
  *

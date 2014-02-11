@@ -23,7 +23,7 @@
 
 /** General Style Info **/
 body {
-	background: #003d4c;
+	background: url('../img/background.png');
 	color: #fff;
 	font-family:'lucida grande',verdana,helvetica,arial,sans-serif;
 	font-size:90%;
@@ -51,7 +51,7 @@ h1 {
 	font-size: 100%;
 }
 h2 {
-	background:#fff;
+	/*background:#fff;*/
 	color: #e32;
 	font-family:'Gill Sans','lucida grande', helvetica, arial, sans-serif;
 	font-size: 190%;
@@ -98,7 +98,6 @@ p {
 	text-decoration: underline;
 }
 #content{
-	background: #fff;
 	clear: both;
 	color: #333;
 	padding: 10px 20px 40px 20px;
@@ -165,7 +164,7 @@ table tr td {
 	border-bottom:1px solid #ddd;
 }
 table tr:nth-child(even) {
-	background: #f9f9f9;
+	/*background: #f9f9f9;*/
 }
 td.actions {
 	text-align: center;
@@ -191,7 +190,7 @@ table td.actions a {
 
 /** Paging **/
 .paging {
-	background:#fff;
+	/*background:#fff;*/
 	color: #ccc;
 	margin-top: 1em;
 	clear:both;
@@ -212,18 +211,20 @@ table td.actions a {
 	background: #efefef;
 }
 .paging .prev {
+	background:#fff;
 	border-left: 1px solid #ccc;
 	-moz-border-radius: 4px 0 0 4px;
 	-webkit-border-radius: 4px 0 0 4px;
 	border-radius: 4px 0 0 4px;
 }
 .paging .next {
+	background:#fff;
 	-moz-border-radius: 0 4px 4px 0;
 	-webkit-border-radius: 0 4px 4px 0;
 	border-radius: 0 4px 4px 0;
 }
 .paging .disabled {
-	color: #ddd;
+	color: darkgray;
 }
 .paging .disabled:hover {
 	background: transparent;
