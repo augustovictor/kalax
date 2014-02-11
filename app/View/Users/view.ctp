@@ -1,27 +1,15 @@
 <div class="users view">
 <h2><?php echo __('User'); ?></h2>
-	<dl>
-		<dt><?php echo __('Id'); ?></dt>
-		<dd>
-			<?php echo h($user['User']['id']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Role'); ?></dt>
-		<dd>
+		<p>
+			<strong><?php echo __('Role'); ?></strong>
+			<br>
 			<?php echo $this->Html->link($user['Role']['title'], array('controller' => 'roles', 'action' => 'view', $user['Role']['id'])); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Username'); ?></dt>
-		<dd>
+		</p>
+		<p>
+			<strong><?php echo __('Username'); ?></strong>
+			<br>
 			<?php echo h($user['User']['username']); ?>
-			&nbsp;
-		</dd>
-		<dt><?php echo __('Hashed Password'); ?></dt>
-		<dd>
-			<?php echo h($user['User']['hashed_password']); ?>
-			&nbsp;
-		</dd>
-	</dl>
+		</p>
 </div>
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>

@@ -8,6 +8,14 @@ App::uses('AppController', 'Controller');
  */
 class ServicesController extends AppController {
 
+	public function isAuthorized($user) {
+		if ($this->action === 'add') {
+			return true;
+		}
+
+		return parent::isAuthorized($user);
+	}
+
 /**
  * Components
  *

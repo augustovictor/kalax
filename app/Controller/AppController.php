@@ -32,4 +32,26 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 	public $helpers = array('BootstrapCake.Bootstrap'); 
+
+	public $components = array(
+		'Session',
+		'Auth' => array(
+			'loginRedirect' => array('controller' => 'users', 'action' => 'add'),
+			'logoutRedirect' => array('controller' => 'services', 'action' => 'index'),
+			'authorize' => array('Controller')
+		)
+	);
+
+	public function beforeFilter() {
+		$this->Auth->allow('index', 'view');
+	}
+	// End beforeFilter
+
+	public function isAuthorized($user) {
+		if(isset($user['role'])) {
+			return true;
+		}
+		return false;
+	}
+
 }

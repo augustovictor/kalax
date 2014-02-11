@@ -6,7 +6,7 @@
 		echo $this->Form->input('id');
 		echo $this->Form->input('role_id');
 		echo $this->Form->input('username');
-		echo $this->Form->input('hashed_password');
+		echo $this->Form->input('password');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>

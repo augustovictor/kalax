@@ -40,6 +40,33 @@ $cakeDescription = __d('cake_dev', 'Kalax');
 </head>
 <body>
 	<div id="container">
+		<div class="navbar">
+			<div class="navbar-inner">
+				<a class="brand" href="#">Kalax Computer Systems - Admin</a>
+				<ul class="nav">
+					<?php if (AuthComponent::user()): ?>
+						<li><?php echo $this->Html->link(__('Services'), array('controller' => 'services', 'action' => 'index')); ?></li>
+						<li><?php echo $this->Html->link(__('Products'), array('controller' => 'products', 'action' => 'index')); ?></li>
+						<li><?php echo $this->Html->link(__('Jobs'), array('controller' => 'jobs', 'action' => 'index')); ?></li>
+						<li><?php echo $this->Html->link(__('News'), array('controller' => 'news', 'action' => 'index')); ?></li>
+						<li><?php echo $this->Html->link(__('Events'), array('controller' => 'events', 'action' => 'index')); ?></li>
+						<li><?php echo $this->Html->link(__('Qualifications'), array('controller' => 'qualifications', 'action' => 'index')); ?></li>
+						<li><?php echo $this->Html->link(__('Users'), array('controller' => 'users', 'action' => 'index')); ?></li>
+					<?php endif; ?>
+					<li>
+						<?php 
+							if (AuthComponent::user()) {
+								echo 'Hello, ' . AuthComponent::user('username');
+								echo $this->Html->link(__('Logout'), array('controller' => 'users', 'action' => 'logout')); 
+							} 
+						?>
+						<?php if (!AuthComponent::user()) echo $this->Html->link(__('Login'), array('controller' => 'users', 'action' => 'login')); ?>
+					</li>
+				</ul>
+
+
+			</div>
+		</div>
 		<div id="header">
 			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
 		</div>

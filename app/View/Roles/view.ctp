@@ -38,7 +38,7 @@
 			<td><?php echo $user['id']; ?></td>
 			<td><?php echo $user['role_id']; ?></td>
 			<td><?php echo $user['username']; ?></td>
-			<td><?php echo $user['hashed_password']; ?></td>
+			<td><?php echo $user['password']; ?></td>
 			<td class="actions">
 				<?php echo $this->Html->link(__('View'), array('controller' => 'users', 'action' => 'view', $user['id'])); ?>
 				<?php echo $this->Html->link(__('Edit'), array('controller' => 'users', 'action' => 'edit', $user['id'])); ?>
