@@ -9,7 +9,7 @@ App::uses('AppController', 'Controller');
 class ServicesController extends AppController {
 
 	public function isAuthorized($user) {
-		if ($this->action === 'add') {
+		if (isset($this->action)) {
 			return true;
 		}
 
