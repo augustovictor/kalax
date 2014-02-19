@@ -39,24 +39,32 @@ $cakeDescription = __d('cake_dev', 'Kalax');
 </head>
 <body>
 	<div id="container">
-		<div class="navbar">
+		<div class="navbar navbar-inverse">
 			<div class="navbar-inner">
-				<?php echo $this->Html->link(__('Kalax Computer Systems - Admin'), array('controller' => 'services', 'action' => 'public_page'), array('class' => 'brand')) ?>
+				<?php echo $this->Html->link(__('Kalax Computer Systems - Admin'), array('controller' => 'services', 'action' => 'index'), array('class' => 'brand')) ?>
 				<ul class="nav">
-						<li><?php echo $this->Html->link(__('Services'), array('controller' => 'services', 'action' => 'public_page')); ?></li>
-						<li><?php echo $this->Html->link(__('Products'), array('controller' => 'products', 'action' => 'public_page')); ?></li>
-						<li><?php echo $this->Html->link(__('Jobs'), array('controller' => 'jobs', 'action' => 'public_page')); ?></li>
-						<li><?php echo $this->Html->link(__('Events'), array('controller' => 'events', 'action' => 'public_page')); ?></li>
-						<li><?php echo $this->Html->link(__('Qualifications'), array('controller' => 'qualifications', 'action' => 'public_page')); ?></li>
+					<?php if (AuthComponent::user()): ?>
+						<li><?php echo $this->Html->link(__('Services'), array('controller' => 'services', 'action' => 'index')); ?></li>
+						<li><?php echo $this->Html->link(__('Products'), array('controller' => 'products', 'action' => 'index')); ?></li>
+						<li><?php echo $this->Html->link(__('Jobs'), array('controller' => 'jobs', 'action' => 'index')); ?></li>
+						<li><?php echo $this->Html->link(__('News'), array('controller' => 'news', 'action' => 'index')); ?></li>
+						<li><?php echo $this->Html->link(__('Events'), array('controller' => 'events', 'action' => 'index')); ?></li>
+						<li><?php echo $this->Html->link(__('Qualifications'), array('controller' => 'qualifications', 'action' => 'index')); ?></li>
+						<li><?php echo $this->Html->link(__('Users'), array('controller' => 'users', 'action' => 'index')); ?></li>
+						<li><?php echo $this->Html->link(__('Public website'), array('controller' => 'services', 'action' => 'public_page')); ?></li>
+						<li><?php echo $this->Html->link(__('Public website'), array('controller' => 'services', 'action' => 'public_page')); ?></li>
+					<?php endif; ?>
 					<li>
 						<?php 
 							if (AuthComponent::user()) {
 								echo '<strong>Hello, ' . AuthComponent::user('username') . '</strong>';
 								echo $this->Html->link(__('Logout'), array('controller' => 'users', 'action' => 'logout')); 
-								echo $this->Html->link(__('Admin'), array('controller' => 'jobs', 'action' => 'index'));
 							} 
 						?>
-						<?php if (!AuthComponent::user()) echo $this->Html->link(__('Login'), array('controller' => 'users', 'action' => 'login')); ?>
+						<?php if (!AuthComponent::user()): ?>
+								<li> <?php echo $this->Html->link(__('Return to website'), array('controller' => 'services', 'action' => 'public_page')); ?> </li>
+							}
+						<?php endif; ?>
 					</li>
 				</ul>
 

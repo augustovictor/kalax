@@ -16,6 +16,8 @@ class UsersController extends AppController {
 		return parent::isAuthorized($user);
 	}
 
+
+
 /**
  * Components
  *
@@ -26,6 +28,7 @@ class UsersController extends AppController {
 	public function beforeFilter() {
 		parent::beforeFilter();
 		$this->Auth->allow('add', 'logout');
+		$this->layout = 'admin';
 	}
 	// End beforeFilter
 

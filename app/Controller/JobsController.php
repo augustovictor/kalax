@@ -16,6 +16,11 @@ class JobsController extends AppController {
 		return parent::isAuthorized($user);
 	}
 
+	public function beforeFilter() {
+		parent::beforeFilter();
+		$this->layout = 'admin';
+	}
+
 /**
  * Components
  *
@@ -24,12 +29,24 @@ class JobsController extends AppController {
 	public $components = array('Paginator');
 
 /**
+ * public_page method
+ *
+ * @return void
+ */
+	public function public_page() {
+		$this->Job->recursive = 0;
+		$this->layout = 'default';
+		$this->set('jobs', $this->Paginator->paginate());
+	}
+
+/**
  * index method
  *
  * @return void
  */
 	public function index() {
 		$this->Job->recursive = 0;
+		$this->layout = 'admin';
 		$this->set('jobs', $this->Paginator->paginate());
 	}
 

@@ -15,6 +15,11 @@ class ProductsController extends AppController {
 
 		return parent::isAuthorized($user);
 	}
+
+	public function beforeFilter() {
+		parent::beforeFilter();
+		$this->layout = 'admin';
+	}
 	
 /**
  * Components
@@ -22,6 +27,17 @@ class ProductsController extends AppController {
  * @var array
  */
 	public $components = array('Paginator');
+
+/**
+ * public_page method
+ *
+ * @return void
+ */
+	public function public_page() {
+		$this->Product->recursive = 0;
+		$this->layout = 'default';
+		$this->set('products', $this->Paginator->paginate());
+	}
 
 /**
  * index method

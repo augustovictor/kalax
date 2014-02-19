@@ -16,6 +16,11 @@ class BusinessesController extends AppController {
 		return parent::isAuthorized($user);
 	}
 
+	public function beforeFilter() {
+		parent::beforeFilter();
+		$this->layout = 'admin';
+	}
+
 /**
  * Components
  *

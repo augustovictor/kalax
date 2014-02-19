@@ -16,12 +16,28 @@ class EventsController extends AppController {
 		return parent::isAuthorized($user);
 	}
 
+	public function beforeFilter() {
+		parent::beforeFilter();
+		$this->layout = 'admin';
+	}
+
 /**
  * Components
  *
  * @var array
  */
 	public $components = array('Paginator');
+
+/**
+ * public_page method
+ *
+ * @return void
+ */
+	public function public_page() {
+		$this->Event->recursive = 0;
+		$this->layout = 'default';
+		$this->set('events', $this->Paginator->paginate());
+	}
 
 /**
  * index method

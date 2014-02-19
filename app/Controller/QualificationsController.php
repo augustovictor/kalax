@@ -16,6 +16,12 @@ class QualificationsController extends AppController {
 
 		return parent::isAuthorized($user);
 	}
+
+	public function beforeFilter() {
+		parent::beforeFilter();
+		$this->layout = 'admin';
+	}
+
 /**
  * Components
  *
@@ -23,6 +29,18 @@ class QualificationsController extends AppController {
  */
 	public $components = array('Paginator');
 
+
+/**
+ * public_page method
+ *
+ * @return void
+ */
+	public function public_page() {
+		$this->Qualification->recursive = 0;
+		$this->layout = 'default';
+		$this->set('qualifications', $this->Paginator->paginate());
+	}
+	
 /**
  * index method
  *

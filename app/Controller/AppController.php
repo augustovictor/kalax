@@ -37,13 +37,13 @@ class AppController extends Controller {
 		'Session',
 		'Auth' => array(
 			'loginRedirect' => array('controller' => 'services', 'action' => 'index'),
-			'logoutRedirect' => array('controller' => 'services', 'action' => 'index'),
+			'logoutRedirect' => array('controller' => 'services', 'action' => 'public_page'),
 			'authorize' => array('Controller')
 		)
 	);
 
 	public function beforeFilter() {
-		$this->Auth->allow('', '');
+		$this->Auth->allow('public_page');
 	}
 	// End beforeFilter
 
