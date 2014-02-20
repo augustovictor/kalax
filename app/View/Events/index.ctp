@@ -2,20 +2,14 @@
 	<h2><?php echo __('Events'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
-			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('event_visible'); ?></th>
-			<th><?php echo $this->Paginator->sort('event_position'); ?></th>
-			<th><?php echo $this->Paginator->sort('event_pic_name'); ?></th>
 			<th><?php echo $this->Paginator->sort('event_path'); ?></th>
 			<th><?php echo $this->Paginator->sort('event_description'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($events as $event): ?>
 	<tr>
-		<td><?php echo h($event['Event']['id']); ?>&nbsp;</td>
 		<td><?php echo h($event['Event']['event_visible']); ?>&nbsp;</td>
-		<td><?php echo h($event['Event']['event_position']); ?>&nbsp;</td>
-		<td><?php echo h($event['Event']['event_pic_name']); ?>&nbsp;</td>
 		<td><?php echo h($event['Event']['event_path']); ?>&nbsp;</td>
 		<td><?php echo h($event['Event']['event_description']); ?>&nbsp;</td>
 		<td class="actions">

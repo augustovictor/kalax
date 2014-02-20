@@ -2,18 +2,12 @@
 	<h2><?php echo __('Services'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
-			<th><?php echo $this->Paginator->sort('id'); ?></th>
-			<th><?php echo $this->Paginator->sort('position'); ?></th>
 			<th><?php echo $this->Paginator->sort('service_title'); ?></th>
-			<th><?php echo $this->Paginator->sort('service_description'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($services as $service): ?>
 	<tr>
-		<td><?php echo h($service['Service']['id']); ?>&nbsp;</td>
-		<td><?php echo h($service['Service']['position']); ?>&nbsp;</td>
 		<td><?php echo h($service['Service']['service_title']); ?>&nbsp;</td>
-		<td><?php echo h($service['Service']['service_description']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $service['Service']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $service['Service']['id'])); ?>

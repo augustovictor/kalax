@@ -2,38 +2,16 @@
 	<h2><?php echo __('Jobs'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
-			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('job_visible'); ?></th>
 			<th><?php echo $this->Paginator->sort('job_title'); ?></th>
-			<th><?php echo $this->Paginator->sort('job_discipline'); ?></th>
-			<th><?php echo $this->Paginator->sort('job_vacancies'); ?></th>
-			<th><?php echo $this->Paginator->sort('job_deadline'); ?></th>
-			<th><?php echo $this->Paginator->sort('job_location'); ?></th>
 			<th><?php echo $this->Paginator->sort('job_start_date'); ?></th>
-			<th><?php echo $this->Paginator->sort('job_term'); ?></th>
-			<th><?php echo $this->Paginator->sort('job_hourly_rate'); ?></th>
-			<th><?php echo $this->Paginator->sort('job_hours'); ?></th>
-			<th><?php echo $this->Paginator->sort('job_description'); ?></th>
-			<th><?php echo $this->Paginator->sort('job_skills'); ?></th>
-			<th><?php echo $this->Paginator->sort('job_key_requirements'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($jobs as $job): ?>
 	<tr>
-		<td><?php echo h($job['Job']['id']); ?>&nbsp;</td>
 		<td><?php echo h($job['Job']['job_visible']); ?>&nbsp;</td>
 		<td><?php echo h($job['Job']['job_title']); ?>&nbsp;</td>
-		<td><?php echo h($job['Job']['job_discipline']); ?>&nbsp;</td>
-		<td><?php echo h($job['Job']['job_vacancies']); ?>&nbsp;</td>
-		<td><?php echo h($job['Job']['job_deadline']); ?>&nbsp;</td>
-		<td><?php echo h($job['Job']['job_location']); ?>&nbsp;</td>
 		<td><?php echo h($job['Job']['job_start_date']); ?>&nbsp;</td>
-		<td><?php echo h($job['Job']['job_term']); ?>&nbsp;</td>
-		<td><?php echo h($job['Job']['job_hourly_rate']); ?>&nbsp;</td>
-		<td><?php echo h($job['Job']['job_hours']); ?>&nbsp;</td>
-		<td><?php echo h($job['Job']['job_description']); ?>&nbsp;</td>
-		<td><?php echo h($job['Job']['job_skills']); ?>&nbsp;</td>
-		<td><?php echo h($job['Job']['job_key_requirements']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $job['Job']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $job['Job']['id'])); ?>

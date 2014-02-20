@@ -2,24 +2,16 @@
 	<h2><?php echo __('Qualifications'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
-			<th><?php echo $this->Paginator->sort('id'); ?></th>
-			<th><?php echo $this->Paginator->sort('qualification_position'); ?></th>
 			<th><?php echo $this->Paginator->sort('qualification_visible'); ?></th>
 			<th><?php echo $this->Paginator->sort('qualification_path'); ?></th>
-			<th><?php echo $this->Paginator->sort('qualification_name'); ?></th>
 			<th><?php echo $this->Paginator->sort('qualification_role'); ?></th>
-			<th><?php echo $this->Paginator->sort('qualification_description'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($qualifications as $qualification): ?>
 	<tr>
-		<td><?php echo h($qualification['Qualification']['id']); ?>&nbsp;</td>
-		<td><?php echo h($qualification['Qualification']['qualification_position']); ?>&nbsp;</td>
 		<td><?php echo h($qualification['Qualification']['qualification_visible']); ?>&nbsp;</td>
 		<td><?php echo h($qualification['Qualification']['qualification_path']); ?>&nbsp;</td>
-		<td><?php echo h($qualification['Qualification']['qualification_name']); ?>&nbsp;</td>
 		<td><?php echo h($qualification['Qualification']['qualification_role']); ?>&nbsp;</td>
-		<td><?php echo h($qualification['Qualification']['qualification_description']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $qualification['Qualification']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $qualification['Qualification']['id'])); ?>

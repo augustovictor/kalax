@@ -15,7 +15,6 @@ blockquote {
 }
 
 body {
-	background: url('../images/background.png');
 	margin: 0px; 
 }
 
@@ -101,8 +100,7 @@ p:hover {
 
 #container {
 	margin: auto !important;
-	padding: 30px;
-	padding-top: 50px;
+	padding-top: 43px;
 }
 
 #default_footer_container {
@@ -152,6 +150,10 @@ div#body {
 #footer_bg {
 	height: 55px;
 	width: 100%;
+}
+
+#header {
+	padding: 0;
 }
 
 #location_map {
@@ -268,6 +270,14 @@ div#body {
 
 .breadcrumb ul li a {
 	color: #333 !important;
+}
+
+.btn {
+	font-weight: 200;
+}
+
+.carousel-caption {
+	padding-right: 85px;
 }
 
 .clear {
@@ -436,6 +446,7 @@ div#body {
 
 .nav li a {
 	font-size: 12px !important;
+	font-weight: 400;
 }
 
 .next_arrow, .prev_arrow {

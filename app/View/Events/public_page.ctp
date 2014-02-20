@@ -1,48 +1,28 @@
 <div class="events index">
-	<h2><?php echo __('Public Events'); ?></h2>
-	<table cellpadding="0" cellspacing="0">
-	<tr>
-			<th><?php echo $this->Paginator->sort('id'); ?></th>
-			<th><?php echo $this->Paginator->sort('event_visible'); ?></th>
-			<th><?php echo $this->Paginator->sort('event_position'); ?></th>
-			<th><?php echo $this->Paginator->sort('event_pic_name'); ?></th>
-			<th><?php echo $this->Paginator->sort('event_path'); ?></th>
-			<th><?php echo $this->Paginator->sort('event_description'); ?></th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
-	</tr>
-	<?php foreach ($events as $event): ?>
-	<tr>
-		<td><?php echo h($event['Event']['id']); ?>&nbsp;</td>
-		<td><?php echo h($event['Event']['event_visible']); ?>&nbsp;</td>
-		<td><?php echo h($event['Event']['event_position']); ?>&nbsp;</td>
-		<td><?php echo h($event['Event']['event_pic_name']); ?>&nbsp;</td>
-		<td><?php echo h($event['Event']['event_path']); ?>&nbsp;</td>
-		<td><?php echo h($event['Event']['event_description']); ?>&nbsp;</td>
-		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $event['Event']['id'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $event['Event']['id'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $event['Event']['id']), null, __('Are you sure you want to delete # %s?', $event['Event']['id'])); ?>
-		</td>
-	</tr>
-<?php endforeach; ?>
-	</table>
-	<p>
-	<?php
-	echo $this->Paginator->counter(array(
-	'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
-	));
-	?>	</p>
-	<div class="paging">
-	<?php
-		echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled'));
-		echo $this->Paginator->numbers(array('separator' => ''));
-		echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));
-	?>
+	<div id="myCarousel2" class="carousel slide photos_carousel">
+		<!-- <ol class="carousel-indicators">
+			<li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
+			<li data-target="#myCarousel2" data-slide-to="1">  </li>
+			<li data-target="#myCarousel2" data-slide-to="2">  </li>
+		</ol> -->
+
+		<div class="carousel-inner">
+
+			<?php foreach($events as $events): ?>
+				<div class="item <?php if($event['Event']['event_position'] == 1) echo 'active'; ?>"> 
+					<img src="<?php echo $event['Event']['event_path']; ?>" class="gallery_img"/> 
+					
+					<div class="carousel-caption subtitle_no_style">
+						<p> <?php echo $event['Event']['event_description']; ?> </p>
+					</div>
+				</div>
+			<?php endforeach; ?>
+			
+		</div>
+
+		<a class="carousel-control left" href="#myCarousel2" data-slide="prev">&lsaquo;</a>
+		<a class="carousel-control right" href="#myCarousel2" data-slide="next">&rsaquo;</a>
+
 	</div>
-</div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('New Event'), array('action' => 'add')); ?></li>
-	</ul>
+	<!-- End myCarousel2 -->
 </div>

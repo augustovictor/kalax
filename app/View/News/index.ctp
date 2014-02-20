@@ -2,18 +2,14 @@
 	<h2><?php echo __('News'); ?></h2>
 	<table cellpadding="0" cellspacing="0">
 	<tr>
-			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('new_title'); ?></th>
-			<th><?php echo $this->Paginator->sort('new_content'); ?></th>
 			<th><?php echo $this->Paginator->sort('new_visible'); ?></th>
 			<th><?php echo $this->Paginator->sort('new_created_in'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php foreach ($news as $news): ?>
 	<tr>
-		<td><?php echo h($news['News']['id']); ?>&nbsp;</td>
 		<td><?php echo h($news['News']['new_title']); ?>&nbsp;</td>
-		<td><?php echo h($news['News']['new_content']); ?>&nbsp;</td>
 		<td><?php echo h($news['News']['new_visible']); ?>&nbsp;</td>
 		<td><?php echo h($news['News']['new_created_in']); ?>&nbsp;</td>
 		<td class="actions">

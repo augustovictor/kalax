@@ -33,6 +33,7 @@ App::uses('Controller', 'Controller');
 class AppController extends Controller {
 	public $helpers = array('BootstrapCake.Bootstrap'); 
 
+
 	public $components = array(
 		'Session',
 		'Auth' => array(

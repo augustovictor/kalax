@@ -81,7 +81,7 @@ $cakeDescription = __d('cake_dev', 'Kalax');
 									<li><?php echo $this->Html->link(__('Logout'), array('controller' => 'users', 'action' => 'logout')); ?></li>
 								</ul>
 							<?php endif; ?>
-						<?php if (!AuthComponent::user()) echo $this->Html->link(__('Login'), array('controller' => 'users', 'action' => 'login')); ?>
+						<?php if (!AuthComponent::user()) echo $this->Html->link(__('Public website'), array('controller' => 'services', 'action' => 'public_page')); ?>
 					</li>
 
 				</ul>
