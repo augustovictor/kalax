@@ -44,7 +44,29 @@ class AppController extends Controller {
 	);
 
 	public function beforeFilter() {
-		$this->Auth->allow('public_page');
+		$this->loadModel('Service');
+		$this->set('services', $this->Service->find('all'));
+
+		$this->loadModel('New');
+		$this->set('news', $this->New->find('all'));	
+
+		$this->loadModel('Business');
+		$this->set('businesses', $this->Business->find('all'));	
+
+		$this->loadModel('Category');
+		$this->set('categories', $this->Category->find('all'));
+
+		$this->loadModel('Product');
+		$this->set('products', $this->Business->Category->Product->find('all'));
+
+		$allowed_pages = array(
+			'public_page', 
+			'home', 
+			'client_area', 
+			'partnerships',
+			'tec_direct',
+		);
+		$this->Auth->allow($allowed_pages);
 	}
 	// End beforeFilter
 

@@ -51,9 +51,9 @@ $cakeDescription = __d('cake_dev', 'Kalax');
 		
 		<div class="navbar">
 			<div class="navbar-inner">
-				<?php echo $this->Html->link(__('Kalax Computer Systems'), array('controller' => 'services', 'action' => 'public_page'), array('class' => 'brand')) ?>
+				<?php echo $this->Html->link(__('Kalax Computer Systems'), array('controller' => 'pages', 'action' => 'home'), array('class' => 'brand')) ?>
 				<ul class="nav">
-					<li><?php echo $this->Html->link(__('Home'), array('controller' => 'pages', 'action' => 'display', 'home')); ?></li>
+					<li><?php echo $this->Html->link(__('Home'), array('controller' => 'pages', 'action' => 'home')); ?></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 							Services
@@ -61,11 +61,27 @@ $cakeDescription = __d('cake_dev', 'Kalax');
 						</a>
 						<ul class="dropdown-menu">
 							<?php foreach($services as $service): ?>
-								<li> <?php echo $this->Html->link(__($service['Service']['service_title']), array('controller' => '', 'action' => '')); ?> </li>
+								<li> <?php echo $this->Html->link(__($service['Service']['service_title']), array('controller' => 'services', 'action' => 'public_page')); ?> </li>
 							<?php endforeach; ?>
 						</ul>
 					</li>
-					<li><?php echo $this->Html->link(__('Products'), array('controller' => 'products', 'action' => 'public_page')); ?></li>
+
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							Tec Direct
+							<b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<?php echo $this->Html->link(__('The company'), array('controller' => 'pages', 'action' => 'tec_direct')); ?>
+							</li>
+
+							<li>
+								<?php echo $this->Html->link(__('Products'), array('controller' => 'products', 'action' => 'public_page')); ?>
+							</li>
+						</ul>
+					</li>
+
 					<li class="dropdown">
 				      	<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 				      		Drivers
@@ -178,12 +194,12 @@ $cakeDescription = __d('cake_dev', 'Kalax');
 							<ul class="dropdown-menu">
 								<li><?php echo $this->Html->link(__('Kalax in the community'), array('controller' => 'events', 'action' => 'public_page')); ?></li>
 								<li><?php echo $this->Html->link(__('Professional qualifications'), array('controller' => 'qualifications', 'action' => 'public_page')); ?></li>
-								<li><?php echo $this->Html->link(__('Partnerships'), array('controller' => 'jobs', 'action' => 'public_page')); ?></li>
+								<li><?php echo $this->Html->link(__('Partnerships'), array('controller' => 'pages', 'action' => 'partnerships')); ?></li>
 								<li><?php echo $this->Html->link(__('Careers'), array('controller' => 'jobs', 'action' => 'public_page')); ?></li>
 							</ul>
 					</li>
 					<li><a href="#contactForm" role="button" data-toggle="modal">Contact</a></li>
-					<li> <?php echo $this->Html->link(__('Client area'), array('controller' => '', 'action' => '')); ?> </li>
+					<li> <?php echo $this->Html->link(__('Client area'), array('controller' => 'pages', 'action' => 'client_area')); ?> </li>
 					<?php if (AuthComponent::user()): ?>
 						<ul class="nav pull-right">
 							<li class="dropdown">
@@ -235,7 +251,9 @@ $cakeDescription = __d('cake_dev', 'Kalax');
 			<?php echo $this->Session->flash(); ?>
 
 			<?php echo $this->fetch('content'); ?>
+			<?php echo $this->element('_sidebar'); ?>
 		</div>
+
 		<div id="footer">
 			<div id="default_footer_container">
 				<div class="text-center">
@@ -285,7 +303,7 @@ $cakeDescription = __d('cake_dev', 'Kalax');
 						<ul class="unstyled footer_menu">
 							<li> <strong> <?php echo $this->Html->link(__('About us'), array('controller' => '', 'action' => '')); ?> </strong> </li>
 							<li> <?php echo $this->Html->link(__('Kalax in the community'), array('controller' => '', 'action' => '')); ?> </li>
-							<li> <?php echo $this->Html->link(__('Partnerships'), array('controller' => '', 'action' => '')); ?> </li>
+							<li> <?php echo $this->Html->link(__('Partnerships'), array('controller' => 'pages', 'action' => 'partnerships')); ?> </li>
 							<li> <?php echo $this->Html->link(__('Professional qualifications'), array('controller' => '', 'action' => '')); ?> </li>
 							<li> <?php echo $this->Html->link(__('Contact'), array('controller' => '', 'action' => '')); ?> </li>
 							<li> <?php echo $this->Html->link(__('Employment'), array('controller' => '', 'action' => '')); ?> </li>
@@ -334,6 +352,6 @@ $cakeDescription = __d('cake_dev', 'Kalax');
 	</form>
 </div>
 <!-- End Contact Modal -->
-	<?php echo $this->element('sql_dump'); ?>
+	<?php #echo $this->element('sql_dump'); ?>
 </body>
 </html>

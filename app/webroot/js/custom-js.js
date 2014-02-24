@@ -136,7 +136,7 @@ $(document).ready(function() {
 		$(this).animate({'margin-top': '-180'})
 		$('.team_member_more_link').text('')
 	}, function() {
-		$(this).animate({'margin-top': '-40'})
+		$(this).animate({'margin-top': '-60'})
 		$('.team_member_more_link').text('more')
 	})
 
@@ -148,6 +148,7 @@ $(document).ready(function() {
 		$('#myTabContent div').eq(0).addClass('active in');
 	})
 	$('#myTabs li').eq(0).addClass('active');
+	$('.tab-pane').eq(0).addClass('active');
 	// $('.products_index_list').eq(0).addClass('active');
 	// activeTab = '';
 	// $('#myTab a').click(function (e) {

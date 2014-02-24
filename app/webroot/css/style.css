@@ -43,6 +43,7 @@ p:hover {
 	background: rgba(133, 133, 133, 0.6);
 	cursor: pointer;
 	font-weight: bold;
+	margin-top: -6px;
 	padding: 10px 0;
 	position: absolute;
 	width: 100%;
@@ -69,6 +70,7 @@ p:hover {
 #call_booking_container {
 	margin-top: 10px;
 	display: none;
+	width: 235px;
 }
 
 #call_booking_container .side_bar_input {
@@ -77,6 +79,13 @@ p:hover {
 
 #call_booking_container select {
 	width: 195px;
+}
+
+#call_booking_form {
+	clear: none;
+	float: left;
+	margin-left: -10px;
+	width: auto;
 }
 
 #camerasModal {
@@ -108,7 +117,9 @@ p:hover {
 }
 
 div#body {
+	border-left: 1px dashed gray;
 	float: right;
+	padding-left: 45px;
 }
 
 #features img {
@@ -607,6 +618,10 @@ div#body {
 	width: 140px;
 }
 
+.sidebar {
+	width: 250px;
+}
+
 .styled_list a {
 	font-size: 12px;
 	letter-spacing: 1px;
@@ -675,7 +690,7 @@ div#body {
 	color: white;
 	font-size: 12px;
 	height: 100%;
-	margin-top: -40px;
+	margin-top: -60px;
 	padding-left: 5px;
 	position: relative;
 }
@@ -718,10 +733,12 @@ div#body {
 
 .title_border {
 	/*border-left: 5px solid #6E75B1;*/
+	clear: left;
 	border-top: 4px solid #C4C4C4;
 	margin-top: 20px;
 	padding: 7px 0 0 10px;
 }
+
 .title_border i {
 	vertical-align: baseline !important;
 }
