@@ -10,7 +10,7 @@
 				  <div class="accordion-group">
 				    <div class="accordion-heading">
 				      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse<?php echo $service['Service']['id']; ?>">
-				       <strong> <?php echo $service['Service']['service_title']; ?></strong>
+				       <strong> <?php echo ucfirst($service['Service']['service_title']); ?></strong>
 				      </a>
 				    </div>
 				    <div id="collapse<?php echo $service['Service']['id']; ?>" class="accordion-body collapse">

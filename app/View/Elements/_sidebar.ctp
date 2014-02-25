@@ -87,7 +87,7 @@
 	<ul class="unstyled styled_list">
 		<?php foreach($services as $service): ?>
 			<li>
-				<?php echo $this->Html->link(__($service['Service']['service_title']), array('controller' => 'services', 'action' => 'public_page')); ?>
+				<?php echo $this->Html->link(__(ucfirst($service['Service']['service_title'])), array('controller' => 'services', 'action' => 'public_page')); ?>
 			</li>
 		<?php endforeach; ?>
 	</ul>
