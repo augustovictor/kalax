@@ -3,7 +3,7 @@
 
 			<h4>
 				Services
-			</h4>					
+			</h4>
 
 			<div class="accordion" id="accordion2">
 				<?php foreach($services as $service): ?>
@@ -14,8 +14,8 @@
 				      </a>
 				    </div>
 				    <div id="collapse<?php echo $service['Service']['id']; ?>" class="accordion-body collapse">
-				      <div class="accordion-inner">
-						<?php echo $service['Service']['service_description']; ?>
+				      <div class="accordion-inner justify">
+						<?php echo nl2br($service['Service']['service_description']); ?>
 						<br />
 				      </div>
 				    </div>

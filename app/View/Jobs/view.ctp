@@ -64,19 +64,19 @@
 		<p>
 			<strong><?php echo __('Job Description'); ?></strong>
 		<br>
-			<?php echo h($job['Job']['job_description']); ?>
+			<?php echo nl2br(h($job['Job']['job_description'])); ?>
 		</p>
 
 		<p>
 			<strong><?php echo __('Job Skills'); ?></strong>
 		<br>
-			<?php echo h($job['Job']['job_skills']); ?>
+			<?php echo nl2br(h($job['Job']['job_skills'])); ?>
 		</p>
 
 		<p>
 			<strong><?php echo __('Job Key Requirements'); ?></strong>
 		<br>
-			<?php echo h($job['Job']['job_key_requirements']); ?>
+			<?php echo nl2br(h($job['Job']['job_key_requirements'])); ?>
 		</p>
 
 </div>

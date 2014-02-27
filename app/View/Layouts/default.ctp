@@ -54,7 +54,6 @@ $cakeDescription = __d('cake_dev', 'Kalax');
 				<?php echo $this->Html->link(__('Kalax Computer Systems'), array('controller' => 'pages', 'action' => 'home'), array('class' => 'brand')) ?>
 				<ul class="nav">
 					<li><?php echo $this->Html->link(__('Home'), array('controller' => 'pages', 'action' => 'home')); ?></li>
-					<li> <?php echo $this->Html->link(__('Services'),array('controller' => 'services', 'action' => 'public_page')); ?> </li>
 					<!-- <li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 							Services
@@ -252,7 +251,8 @@ $cakeDescription = __d('cake_dev', 'Kalax');
 			<?php echo $this->Session->flash(); ?>
 
 			<?php echo $this->fetch('content'); ?>
-			<?php echo $this->element('_sidebar'); ?>
+			<?php if($this->params['controller'] == 'Services') echo $this->element('_sidebar'); ?>
+			<?php if($this->params['controller'] != 'Services') echo $this->element('_sidebar'); ?>
 		</div>
 
 		<div id="footer">

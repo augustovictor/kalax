@@ -13,7 +13,7 @@
 		<p>
 			<strong><?php echo __('Service Description'); ?></strong>
 			<br>
-			<?php echo h($service['Service']['service_description']); ?>
+			<?php echo nl2br(h($service['Service']['service_description'])); ?>
 		</p>
 </div>
 <div class="actions">

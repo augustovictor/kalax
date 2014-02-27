@@ -436,6 +436,10 @@ div#body {
 	width: 200px;
 }
 
+.justify {
+	text-align: justify;
+}
+
 .line_height {
 	line-height: 20px;
 }

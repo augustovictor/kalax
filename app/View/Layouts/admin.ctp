@@ -76,12 +76,12 @@ $cakeDescription = __d('cake_dev', 'Kalax');
 								</a>
 								<ul class="dropdown-menu">
 									<li>
-										<?php echo $this->Html->link(__('Public website'), array('controller' => 'services', 'action' => 'public_page')); ?>
+										<?php echo $this->Html->link(__('Public website'), array('controller' => 'pages', 'action' => 'home')); ?>
 									</li>
 									<li><?php echo $this->Html->link(__('Logout'), array('controller' => 'users', 'action' => 'logout')); ?></li>
 								</ul>
 							<?php endif; ?>
-						<?php if (!AuthComponent::user()) echo $this->Html->link(__('Public website'), array('controller' => 'services', 'action' => 'public_page')); ?>
+						<?php if (!AuthComponent::user()) echo $this->Html->link(__('Public website'), array('controller' => 'pages', 'action' => 'home')); ?>
 					</li>
 
 				</ul>
@@ -101,6 +101,6 @@ $cakeDescription = __d('cake_dev', 'Kalax');
 			
 		</div>
 	</div>
-	<?php echo $this->element('sql_dump'); ?>
+	<?php #echo $this->element('sql_dump'); ?>
 </body>
 </html>

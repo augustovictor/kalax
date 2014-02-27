@@ -1,7 +1,7 @@
 <div class="qualifications">
 	<div id="body" class="span8">
 		<h4>
-			Professinal qualifications
+			Professional qualifications
 		</h4>
 
 		
