@@ -11,7 +11,7 @@ class Event extends AppModel {
  *
  * @var string
  */
-	public $useDbConfig = 'forbaking';
+	public $useDbConfig = 'default';
 
 /**
  * Validation rules

@@ -29,13 +29,13 @@
 				    </div>
 				  </div>
 
-				  <div class="accordion-group">
+				  <!-- <div class="accordion-group">
 				    <div class="accordion-heading">
 				      <a class="accordion-toggle" target="_blank" href="http://www.kalax.on.ca/calendar/Web">
 				        CCalendar Login
 				      </a>
 				    </div>
-				  </div>
+				  </div> -->
 
 				  <div class="accordion-group">
 				    <div class="accordion-heading">

@@ -12,7 +12,7 @@ class Product extends AppModel {
  *
  * @var string
  */
-	public $useDbConfig = 'forbaking';
+	public $useDbConfig = 'default';
 
 /**
  * Display field

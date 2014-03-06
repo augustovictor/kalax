@@ -12,7 +12,7 @@ class User extends AppModel {
  *
  * @var string
  */
-	public $useDbConfig = 'forbaking';
+	public $useDbConfig = 'default';
 
 /**
  * Use table

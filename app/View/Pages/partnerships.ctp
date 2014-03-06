@@ -7,7 +7,7 @@
 
 			<div>
 				<p>
-					Kalax has grown over the past 30 years through the strength of our partnerships to serve our customers the highest technical services that they demand. Partnerships have allowed Kalax to support a customer base throughout Canada and the U.S. while providing smart business solutions to fit their environment. Our expanding partnerships have become an integral part in how we do business in the global IT environment. We invite interested companies to contact us for future partnerships in helping IT grow stronger in our community.
+					Kalax has grown over the past <?php echo date("Y") - 1983; ?> through the strength of our partnerships to serve our customers the highest technical services that they demand. Partnerships have allowed Kalax to support a customer base throughout Canada and the U.S. while providing smart business solutions to fit their environment. Our expanding partnerships have become an integral part in how we do business in the global IT environment. We invite interested companies to contact us for future partnerships in helping IT grow stronger in our community.
 					<br>
 					<br>
 					Our partnerships include:

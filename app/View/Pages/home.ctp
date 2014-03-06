@@ -11,13 +11,13 @@
 				</p>
 
 				<p class="description_container_visible_hidden">
-					Over the past thirty one years we have earned our highly recognized proven track record through numerous successful computer installations, specializing in the Professional and Business Vertical Markets. Some of our successes include Research and Development, Business Efficiency Consultation, &amp; VPN Tunnels. Other Specializations include <a href="wireless.php">Wireless Technology</a>, IP Security Cameras, and other amazing products to bring business and personal computing into the new age.<br><br>
+					Over the past thirty one years we have earned our highly recognized proven track record through numerous successful computer installations, specializing in the Professional and Business Vertical Markets. Some of our successes include Research and Development, Business Efficiency Consultation, &amp; VPN Tunnels. Other Specializations include Wireless Technology, IP Security Cameras, and other amazing products to bring business and personal computing into the new age.<br><br>
 				</p>
 
 				<p class="description_container_visible">
 					Enjoy Free Wireless Access at <a href="http://www.kegsteakhouse.com/" target="_blank">The Keg</a>, <a href="http://www.caribourestaurant.com/">Caribou</a>, &amp; <a href="http://www.daysinn.ca/">Days Inn Hotel</a> locations. Please feel free to contact us if you wish to offer your clients wireless access.<br>
 
-					With the past success and business experience totalling over <strong>35 years</strong>, our qualified staff in the  Consulting, Education, Software Development, and Technical Service Divisions provide the legacy on which we became Kalax  Computer Systems Inc.
+					With the past success and business experience totalling over <strong><?php echo date("Y") - 1983; ?> years</strong>, our qualified staff in the  Consulting, Education, Software Development, and Technical Service Divisions provide the legacy on which we became Kalax  Computer Systems Inc.
 				</p>				
 			<p></p>
 

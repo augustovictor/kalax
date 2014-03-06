@@ -233,8 +233,8 @@ $cakeDescription = __d('cake_dev', 'Kalax');
 				
 				<div class="carousel-caption carousel-caption-margin">
 					<div class="text_container_carousel">
-						<!-- <h4> More than 30 years</h4> -->
-						<p> As a Canadian-controlled, locally-owned corporate entity, we are excited to announce our 30th Anniversary providing long-standing, superior service throughout Thunder Bay and the surrounding area. </p>
+						<!-- <h4> More than <?php# echo date("Y") - 1983; ?></h4> -->
+						<p> As a Canadian-controlled, locally-owned corporate entity, we are excited to announce our <?php echo date("Y") - 1983; ?>st Anniversary providing long-standing, superior service throughout Thunder Bay and the surrounding area. </p>
 					</div>
 				</div>
 			</div>
@@ -331,27 +331,35 @@ $cakeDescription = __d('cake_dev', 'Kalax');
 		</div>
 	</div>
 	<!-- Contact Modal -->
-<div id="contactForm" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
-    <h3 id="myModalLabel">Contact us</h3>
-  </div>
-	<form id="contact_modal" action="functions/contact.php" method="POST">
-	  <div class="modal-body">
-	    	<div id="contact_container">
-		    	<input type="text" name="name" placeholder="Name" required/>
-		    	<input type="email" name="email" placeholder="Email" required/>
-		    	<input type="text" name="phone" placeholder="Phone" />
-	    	</div>
-	    	<textarea rows="5" cols="13" name="text" placeholder="Message" required></textarea>
+	<div id="contactForm" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-header">
+	    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+	    <h3 id="myModalLabel">Contact us</h3>
 	  </div>
-	  <div class="modal-footer">
-	    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-	    <input class="btn btn-primary" type="submit" value="Send"/>
-	  </div>
-	</form>
-</div>
-<!-- End Contact Modal -->
+
+		<?php 
+			if(isset($success)) {
+				echo '<p>' . $success . '</p>';
+			} 
+		?>
+
+		<form id="contact_modal" action="functions/contact.php" method="POST">
+		  <div class="modal-body">
+		    	<div id="contact_container">
+			    	<input type="text" name="name" placeholder="Name" required/>
+			    	<input type="email" name="email" placeholder="Email" required/>
+			    	<input type="text" name="phone" placeholder="Phone" />
+		    	</div>
+		    	<textarea rows="5" cols="13" name="text" placeholder="Message" required></textarea>
+		  </div>
+		  <div class="modal-footer">
+		    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+		    <input class="btn btn-primary" type="submit" value="Send"/>
+		  </div>
+		</form>
+	</div>
+	<!-- End Contact Modal -->
+
 	<?php #echo $this->element('sql_dump'); ?>
 </body>
 </html>
