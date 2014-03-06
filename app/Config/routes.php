@@ -33,6 +33,8 @@
 	Router::connect('/our_products/*', array('controller' => 'products', 'action' => 'public_page'));
 	Router::connect('/our_qualifications/*', array('controller' => 'qualifications', 'action' => 'public_page'));
 	Router::connect('/our_services', array('controller' => 'services', 'action' => 'public_page'));
+	Router::connect('/contact', array('plugin' => 'contact', 'controller' => 'contacts', 'action' => 'add'));
+	Router::connect('/contact/thanks', array('plugin' => 'contact', 'controller' => 'contacts', 'action' => 'thanks'));
 /**
  * Load all plugin routes. See the CakePlugin documentation on
  * how to customize the loading of plugin routes.

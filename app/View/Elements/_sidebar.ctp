@@ -13,72 +13,17 @@
 			<!-- We call you -->
 		</a>
 	</div>
-	<form id="call_booking_form" action="functions/book_call.php" method="post">
-		<div id="call_booking_container">
-			<div class="input-prepend">
-				<span class="add-on">
-					<i class="icon-user"></i>
-				</span>
-				<input class="side_bar_input" type="tel" name="name" placeholder="Name" required="true" pattern="[a-z A-Z]*"/>
-			</div>
-
-			<div class="input-prepend">
-				<span class="add-on">
-					P
-				</span>
-				<input class="side_bar_input" type="text" name="phone" placeholder="Phone number" required="true"/>
-			</div>
-
-			<div class="input-prepend">
-				<span class="add-on">
-					@
-				</span>
-				<input class="side_bar_input" type="email" name="mail" placeholder="E-mail" required="true"/>
-			</div>
-
-			<!-- <span class="help-block">Select from 9:30 am - 5:30 pm</span> -->
-
-			<div class="input-prepend">
-				<span class="add-on">
-					<i class="icon-time"></i>
-				</span>
-				<select id="book_call_time_select" name="time">
-					<option value="Any time: 9:30am - 5:00pm">Any time[9:30am - 5:00pm]</option>
-					<option value="9.30 am">9:30 am</option>
-					<option value="10 am">10:00 am</option>
-					<option value="10.30 am">10:30 am</option>
-					<option value="11 am">11:00 am</option>
-					<option value="11.30 am">11:30 am</option>
-					<option value="1 pm">1:00 pm</option>
-					<option value="1.30 pm">1:30 pm</option>
-					<option value="2 pm">2:00 pm</option>
-					<option value="2.30 pm">2:30 pm</option>
-					<option value="3 pm">3:00 pm</option>
-					<option value="3.30 pm">3:30 pm</option>
-					<option value="4 pm">4:00 pm</option>
-					<option value="4.30 pm">4:30 pm</option>
-					<option value="5">5:00 pm</option>
-				</select>
-			</div>
-
-			<!-- <div>
-				<label class="radio inline">
-					<input id="option_time_am" type="radio" name="option_radio_time" value="am" />
-					am
-				</label>
-
-				<label class="radio inline">
-					<input id="option_time_pm" type="radio" name="option_radio_time" value="pm" />
-					pm
-				</label>
-			</div> -->
-
-			<br />
-
-			<input type="submit" value="Done" class="btn" />
-		</div>
-		<!-- End call_booking_container -->
-	</form>
+	<div id="call_booking_form">
+	<?php  
+		echo $this->Form->create('Contact', array('action' => 'book_call', 'id' => 'call_booking_container'));
+		echo $this->Form->input('Contact.name');
+		echo $this->Form->input('Contact.phone');
+		echo $this->Form->input('Contact.email');
+		echo $this->Form->input('Contact.time', array('options' => array('Any time[9:30am - 5:00pm]' => 'Any time[9:30am - 5:00pm]', '9:30 am' => '9:30 am', '10:00 am' => '10:00 am', '10:30 am' => '10:30 am', '11:00 am' => '11:00 am', '11:30 am' => '11:30 am', '1:00 pm' => '1:00 pm', '1:30 pm' => '1:30 pm', '2:00 pm' => '2:00 pm', '2:30 pm' => '2:30 pm', '3:00 pm' => '3:00 pm', '3:30 pm' => '3:30 pm', '4:00 pm' => '4:00 pm', '4:30 pm' => '4:30 pm', '5:00 pm' => '5:00 pm')));
+		echo $this->Form->end('Done');
+	?>
+	</div>
+	
 
 	<h4 class="title_border">
 		Services

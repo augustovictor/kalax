@@ -20,7 +20,7 @@
  */
 
 App::uses('Controller', 'Controller');
-
+App::uses('CakeEmail', 'Network/Email');
 /**
  * Application Controller
  *
@@ -67,6 +67,7 @@ class AppController extends Controller {
 			'tec_direct',
 		);
 		$this->Auth->allow($allowed_pages);
+
 	}
 	// End beforeFilter
 

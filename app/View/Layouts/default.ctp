@@ -339,11 +339,13 @@ $cakeDescription = __d('cake_dev', 'Kalax');
 	  </div>
 
 		<?php 
-			if(isset($success)) {
-				echo '<p>' . $success . '</p>';
-			} 
+			echo $this->Form->create('Contact', array('action' => 'send'));
+			echo $this->Form->input('Contact.name');
+			echo $this->Form->input('Contact.email');
+			echo $this->Form->input('Contact.message', array('cols' => '10', 'rows' => '4'));
+			echo $this->Form->end('Send');
 		?>
-
+<!-- 
 		<form id="contact_modal" action="functions/contact.php" method="POST">
 		  <div class="modal-body">
 		    	<div id="contact_container">
@@ -357,7 +359,7 @@ $cakeDescription = __d('cake_dev', 'Kalax');
 		    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
 		    <input class="btn btn-primary" type="submit" value="Send"/>
 		  </div>
-		</form>
+		</form> -->
 	</div>
 	<!-- End Contact Modal -->
 

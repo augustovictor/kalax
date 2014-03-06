@@ -86,6 +86,8 @@ CakePlugin::load('BootstrapCake');
  *
  * ));
  */
+Configure::write('Contact.email', 'victoraweb@gmail.com');
+
 Configure::write('Dispatcher.filters', array(
 	'AssetDispatcher',
 	'CacheDispatcher'
