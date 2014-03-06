@@ -128,12 +128,12 @@ $(document).ready(function() {
 	//Show more about member
 	$('.team_member_more_link').each(function() {
 		$(this).click(function() {
-			$(this).parent().parent().parent().animate({'margin-top': '-180'})
+			$(this).parent().parent().parent().animate({'margin-top': '-200'})
 		})
 	})
 
 	$('.team_member_desc').hover(function() {
-		$(this).animate({'margin-top': '-180'})
+		$(this).animate({'margin-top': '-200'})
 		$('.team_member_more_link').text('')
 	}, function() {
 		$(this).animate({'margin-top': '-60'})

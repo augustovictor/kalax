@@ -43,17 +43,17 @@
 					<br />
 					<strong>Job description </strong>
 					<br />
-					<?php echo $job['Job']['job_description']; ?>
+					<?php echo nl2br($job['Job']['job_description']); ?>
 					<br />
 					<br />
 					<strong>Qualifications and skills</strong>
 					<br />
-					<?php echo $job['Job']['job_skills']; ?>
+					<?php echo nl2br($job['Job']['job_skills']); ?>
 					<br />
 					<br />
 					<strong>Key requirements</strong>
 					<br />
-					<?php echo $job['Job']['job_key_requirements']; ?>
+					<?php echo nl2br($job['Job']['job_key_requirements']); ?>
 					<br />
 					<br />
 			      </div>

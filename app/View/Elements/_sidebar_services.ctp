@@ -87,16 +87,9 @@
 	<ul class="unstyled styled_list">
 		<?php foreach($services as $service): ?>
 			<li>
-				<?php if($this->params['controller'] != 'services'): ?>
-					<?php echo $this->Html->link(__($service['Service']['service_title']), array('controller' => 'services', 'action' => 'public_page')); ?>
-				<?php endif; ?>
-				
-				<?php if($this->params['controller'] == 'services'): ?>
-					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse<?php echo $service['Service']['id']; ?>">
-						<strong> <?php echo $service['Service']['service_title']; ?></strong>
-					</a>
-				  <?php endif; ?>
-
+				<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse<?php echo $service['Service']['id']; ?>">
+			       <strong> <?php echo ucfirst($service['Service']['service_title']); ?></strong>
+				</a>
 			</li>
 		<?php endforeach; ?>
 	</ul>
