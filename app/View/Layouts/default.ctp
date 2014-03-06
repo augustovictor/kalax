@@ -198,7 +198,7 @@ $cakeDescription = __d('cake_dev', 'Kalax');
 								<li><?php echo $this->Html->link(__('Careers'), array('controller' => 'jobs', 'action' => 'public_page')); ?></li>
 							</ul>
 					</li>
-					<li><a href="#contactForm" role="button" data-toggle="modal">Contact</a></li>
+					<li><?php echo $this->Html->link(__('Contact us'), array('plugin' => false, 'controller' => '', 'action' => 'contact')); ?></li>
 					<li> <?php echo $this->Html->link(__('Client area'), array('controller' => 'pages', 'action' => 'client_area')); ?> </li>
 					<?php if (AuthComponent::user()): ?>
 						<ul class="nav pull-right">
