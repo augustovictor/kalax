@@ -4,7 +4,7 @@
 		<legend><?php echo __('Edit Event'); ?></legend>
 	<?php
 		echo $this->Form->input('id');
-		echo $this->Form->input('event_visible');
+		echo $this->Form->input('event_visible', array('type' => 'checkbox'));
 		echo $this->Form->input('event_position');
 		echo $this->Form->input('event_pic_name');
 		echo $this->Form->input('event_path', array('type' => 'file'));

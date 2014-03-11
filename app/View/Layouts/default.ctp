@@ -27,7 +27,7 @@ $cakeDescription = __d('cake_dev', 'Kalax');
 		<?php echo $title_for_layout; ?>
 	</title>
 	<?php
-		echo $this->Html->meta('icon');
+		// echo $this->Html->meta('icon');
 
 		echo $this->Html->css('cake.generic');
 	    echo $this->Html->css('bootstrap-responsive');
@@ -338,12 +338,30 @@ $cakeDescription = __d('cake_dev', 'Kalax');
 	    <h3 id="myModalLabel">Contact us</h3>
 	  </div>
 
+	   <div class="modal-body">
+        <p>
+        	KALAX COMPUTER SYSTEMS INC.
+        	<br>
+			<a href="https://maps.google.ca/maps?ie=UTF-8&q=kalax+map+thunder+bay&fb=1&gl=ca&hq=kalax+map+thunder+bay&cid=8719327751092870199&ei=N_QZU-SYNufuyAH8r4DoAw&ved=0CDgQrwswAg" target="_blank">
+				715 Hewitson St, Suite 1002 - Thunder Bay, ON, Canada P7B 6B5
+			</a>
+			<br>
+			(Located in the Cheadles building facing the Harbour Expressway)
+			<br>
+			<strong>P:</strong> (807) 623-4566
+			<br>
+			<strong>Email:</strong> info@kalax.on.ca
+        </p>
+      </div>
+
 		<?php 
+			/*
 			echo $this->Form->create('Contact', array('action' => 'send'));
-			echo $this->Form->input('Contact.name');
-			echo $this->Form->input('Contact.email');
-			echo $this->Form->input('Contact.message', array('cols' => '10', 'rows' => '4'));
+			echo $this->Form->input('Contact.name', array('class' => 'span7'));
+			echo $this->Form->input('Contact.email', array('class' => 'span7'));
+			echo $this->Form->input('Contact.message', array('cols' => '10', 'rows' => '4', 'class' => 'span7'));
 			echo $this->Form->end('Send');
+			*/
 		?>
 <!-- 
 		<form id="contact_modal" action="functions/contact.php" method="POST">
