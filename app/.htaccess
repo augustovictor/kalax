@@ -2,4 +2,6 @@
     RewriteEngine on
     RewriteRule    ^$    webroot/    [L]
     RewriteRule    (.*) webroot/$1    [L]
+    php_value upload_max_filesize 999999999999999MB
+	php_value post_max_size 999999999999999MB
 </IfModule>
