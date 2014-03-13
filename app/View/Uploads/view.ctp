@@ -9,6 +9,8 @@
 			<strong><?php echo __('Upload Path'); ?></strong>
 			<br>
 			<?php echo h($upload['Upload']['upload_path']); ?>
+			<br>
+			<?php echo $this->Html->link(__('Download'), array('controller' => 'uploads', 'action' => 'download', h($upload['Upload']['id']), 'class' => 'btn')); ?>
 		</p>
 		<p>
 			<strong><?php echo __('Upload Description'); ?></strong>

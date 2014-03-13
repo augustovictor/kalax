@@ -125,7 +125,7 @@
 
 				<ul>
 					<?php foreach($uploads as $upload): ?>
-					    <li><?php echo $upload['Upload']['title'] ?></li>
+					    <li><?php echo $this->Html->link(__($upload['Upload']['title']), array('controller' => 'uploads', 'action' => 'download', $upload['Upload']['id'])); ?></li>
 					<?php endforeach; ?>
 				</ul>
 

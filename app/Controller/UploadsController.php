@@ -20,8 +20,9 @@ class UploadsController extends AppController {
 	public $components = array('Paginator');
 
 	public function download($id) {
-	    $file = $this->Upload->find($id);
-	    return $file;
+		$upload = $this->Upload->find('first', array('conditions' => array('Upload.' . $this->Upload->primaryKey => $id)));
+	    $this->response->file(WWW_ROOT .'img' . DS .  $upload['Upload']['upload_path'], array('download' => true, 'name' => $upload['Upload']['title'] . '.exe'));
+	    return $this->response;
 	}
 
 	public function index() {
@@ -34,6 +35,7 @@ class UploadsController extends AppController {
 		if (!$this->Upload->exists($id)) {
 			throw new NotFoundException(__('Invalid upload'));
 		}
+
 		$options = array('conditions' => array('Upload.' . $this->Upload->primaryKey => $id));
 		$this->set('upload', $this->Upload->find('first', $options));
 	}
