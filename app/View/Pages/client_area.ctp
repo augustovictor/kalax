@@ -123,6 +123,12 @@
 					Files
 				</h4>
 
+				<ul>
+					<?php foreach($uploads as $upload): ?>
+					    <li><?php echo $upload['Upload']['title'] ?></li>
+					<?php endforeach; ?>
+				</ul>
+
 				<ul class="unstiled">
 					<li>
 						<a href="http://kalax.on.ca/test/project/files/Apache.exe"> Free office version</a>

@@ -8,7 +8,7 @@
 	</tr>
 	<?php foreach ($uploads as $upload): ?>
 	<tr>
-		<td><?php echo h($upload['Upload']['title']); ?>&nbsp;</td>
+		<td> <?php echo $this->Html->link(h(__($upload['Upload']['title'])), array('controller' => 'uploads', 'action' => 'download', $upload['Upload']['id'])); ?>&nbsp;</td>
 		<td><?php echo h($upload['Upload']['upload_description']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $upload['Upload']['id'])); ?>

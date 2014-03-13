@@ -19,6 +19,11 @@ class UploadsController extends AppController {
 
 	public $components = array('Paginator');
 
+	public function download($id) {
+	    $file = $this->Upload->find($id);
+	    return $file;
+	}
+
 	public function index() {
 		$this->Upload->recursive = 0;
 		$this->set('uploads', $this->Paginator->paginate());

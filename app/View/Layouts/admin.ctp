@@ -65,6 +65,7 @@ $cakeDescription = __d('cake_dev', 'Kalax');
 								<li><?php echo $this->Html->link(__('Jobs'), array('controller' => 'jobs', 'action' => 'index')); ?></li>
 							</ul>
 						</li>
+						<li><?php echo $this->Html->link(__('Uploads'), array('controller' => 'uploads', 'action' => 'index')); ?></li>
 						<li><?php echo $this->Html->link(__('Users'), array('controller' => 'users', 'action' => 'index')); ?></li>
 					<?php endif; ?>
 

@@ -47,6 +47,9 @@ class AppController extends Controller {
 		$this->loadModel('Service');
 		$this->set('services', $this->Service->find('all'));
 
+		$this->loadModel('Upload');
+		$this->set('uploads', $this->Upload->find('all'));
+
 		$this->loadModel('New');
 		$this->set('news', $this->New->find('all'));	
 
