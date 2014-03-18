@@ -270,6 +270,8 @@ $cakeDescription = __d('cake_dev', 'Kalax');
 									</a>
 								</strong>
 								<br>
+								<strong>Office hours:</strong> 9:30 am - 4:30 pm (By appointment only)
+								<br>
 								<abbr title="Phone">P: (807) 623-4566 </abbr>
 							</p>
 						</p>
@@ -351,6 +353,8 @@ $cakeDescription = __d('cake_dev', 'Kalax');
 			<strong>P:</strong> (807) 623-4566
 			<br>
 			<strong>Email:</strong> info@kalax.on.ca
+			<br>
+			<strong>Office hours:</strong> 9:30 am - 4:30 pm (By appointment only)
         </p>
       </div>
 
@@ -381,6 +385,6 @@ $cakeDescription = __d('cake_dev', 'Kalax');
 	</div>
 	<!-- End Contact Modal -->
 
-	<?php echo $this->element('sql_dump'); ?>
+	<?php #echo $this->element('sql_dump'); ?>
 </body>
 </html>
