@@ -1,6 +1,7 @@
 <?php  
 
 App::uses('AppController', 'Controller');
+App::uses('File', 'Utility');
 
 class UploadsController extends AppController {
 
@@ -21,7 +22,7 @@ class UploadsController extends AppController {
 
 	public function download($id) {
 		$upload = $this->Upload->find('first', array('conditions' => array('Upload.' . $this->Upload->primaryKey => $id)));
-	    $this->response->file(WWW_ROOT .'img' . DS .  $upload['Upload']['upload_path'], array('download' => true, 'name' => $upload['Upload']['title'] . '.exe'));
+	    $this->response->file(WWW_ROOT .'img' . DS .  $upload['Upload']['upload_path'], array('download' => true, 'name' => $upload['Upload']['title']));
 	    return $this->response;
 	}
 
@@ -82,10 +83,20 @@ class UploadsController extends AppController {
 	// End edit
 
 	public function delete($id = null) {
+
 		$this->Upload->id = $id;
 		if (!$this->Upload->exists()) {
 			throw new NotFoundException(__('Invalid upload'));
 		}
+		$file_name = $this->Upload->findById($id);
+		$file_name = $file_name['Upload']['upload_path'];
+		$file = new File(WWW_ROOT . 'img' . DS . $file_name);
+
+		if($file->delete()) {
+			$this->Session->setFlash(__('The upload has been deleted.'));
+		}
+		$file->close();
+
 		$this->request->onlyAllow('post', 'delete');
 		if ($this->Upload->delete()) {
 			$this->Session->setFlash(__('The upload has been deleted.'));
