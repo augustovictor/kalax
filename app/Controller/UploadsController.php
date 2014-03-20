@@ -22,7 +22,7 @@ class UploadsController extends AppController {
 
 	public function download($id) {
 		$upload = $this->Upload->find('first', array('conditions' => array('Upload.' . $this->Upload->primaryKey => $id)));
-	    $this->response->file(WWW_ROOT .'img' . DS .  $upload['Upload']['upload_path'], array('download' => true, 'name' => $upload['Upload']['title']));
+	    $this->response->file(WWW_ROOT .'img' . DS .  $upload['Upload']['upload_path'], array('download' => true, 'name' => $upload['Upload']['upload_path']));
 	    return $this->response;
 	}
 

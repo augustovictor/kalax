@@ -129,22 +129,6 @@
 					<?php endforeach; ?>
 				</ul>
 
-				<ul class="unstiled">
-					<li>
-						<a href="http://kalax.on.ca/test/project/files/Apache.exe"> Free office version</a>
-					</li>
-
-					<li>
-						<a href="http://kalax.on.ca/test/project/files/eav7_nt64_enu.msi"> Nod32 Home Edition - Version 7 64 bits</a>
-					</li>
-
-					<li>
-						<a href="http://kalax.on.ca/uploads/eav_nt32_enu.msi"> Nod32 Home Edition - Version 7 32 bits</a>
-					</li>
-
-														</ul>
-
-
 
 			</div>
 
