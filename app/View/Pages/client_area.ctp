@@ -14,11 +14,6 @@
 				<div class="accordion" id="accordion2">
 
 				  <div class="accordion-group">
-				    <div class="accordion-heading">
-				      <a class="accordion-toggle" target="_blank" href="http://www.kalax.on.ca/client_FTP/">
-				        FTP Login
-				      </a>
-				    </div>
 				  </div>
 
 				  <div class="accordion-group">

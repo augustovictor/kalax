@@ -283,16 +283,16 @@ $cakeDescription = __d('cake_dev', 'Kalax');
 					<div class="footer_menu_container span12">
 
 						<ul class="unstyled footer_menu">
-							<li> <strong> <?php echo $this->Html->link(__('Home'), array('controller' => '', 'action' => '')); ?> </strong></li>
+							<li> <strong> <?php echo $this->Html->link(__('Home'), array('controller' => 'pages', 'action' => 'home')); ?> </strong></li>
 						</ul>
 						<ul class="unstyled footer_menu inline-block">
-							<li> <strong> <?php echo $this->Html->link(__('Services'), array('controller' => '', 'action' => '')); ?> </strong> </li>
-							<li> <?php echo $this->Html->link(__('Client Area'), array('controller' => '', 'action' => '')); ?> </li>
+							<li> <strong> <?php echo $this->Html->link(__('Services'), array('controller' => 'pages', 'action' => 'our_services')); ?> </strong> </li>
+							<li> <?php echo $this->Html->link(__('Client Area'), array('controller' => 'pages', 'action' => 'client_area')); ?> </li>
 						</ul>
 
 						<ul class="unstyled footer_menu">
-							<li> <strong> <?php echo $this->Html->link(__('Tec Direct'), array('controller' => '', 'action' => '')); ?> </strong> </li>
-							<li> <?php echo $this->Html->link(__('Products'), array('controller' => '', 'action' => '')); ?> </li>
+							<li> <strong> <?php echo $this->Html->link(__('Tec Direct'), array('controller' => 'pages', 'action' => 'tec_direct')); ?> </strong> </li>
+							<li> <?php echo $this->Html->link(__('Products'), array('controller' => 'products', 'action' => 'public_page')); ?> </li>
 						</ul>
 
 						<!-- <ul class="unstyled footer_menu">
@@ -300,25 +300,17 @@ $cakeDescription = __d('cake_dev', 'Kalax');
 						</ul> -->
 
 						<ul class="unstyled footer_menu">
-							<li> <strong> <?php echo $this->Html->link(__('Drivers'), array('controller' => '', 'action' => '')); ?> </strong> </li>
+							<li><?php echo $this->Html->link(__('Kalax in the community'), array('controller' => 'events', 'action' => 'public_page')); ?></li>
+								<li><?php echo $this->Html->link(__('Professional qualifications'), array('controller' => 'qualifications', 'action' => 'public_page')); ?></li>
+								<li><?php echo $this->Html->link(__('Partnerships'), array('controller' => 'pages', 'action' => 'partnerships')); ?></li>
+								<li><?php echo $this->Html->link(__('Careers'), array('controller' => 'jobs', 'action' => 'public_page')); ?></li>
+								<li><a href="#contactForm" role="button" data-toggle="modal">Contact</a></li>
 						</ul>
 
-						<ul class="unstyled footer_menu">
-							<li> <strong> <?php echo $this->Html->link(__('About us'), array('controller' => '', 'action' => '')); ?> </strong> </li>
-							<li> <?php echo $this->Html->link(__('Kalax in the community'), array('controller' => '', 'action' => '')); ?> </li>
-							<li> <?php echo $this->Html->link(__('Partnerships'), array('controller' => 'pages', 'action' => 'partnerships')); ?> </li>
-							<li> <?php echo $this->Html->link(__('Professional qualifications'), array('controller' => '', 'action' => '')); ?> </li>
-							<li> <?php echo $this->Html->link(__('Contact'), array('controller' => '', 'action' => '')); ?> </li>
-							<li> <?php echo $this->Html->link(__('Employment'), array('controller' => '', 'action' => '')); ?> </li>
-						</ul>
-
-
-						<ul class="unstyled footer_menu">
-							<li> <strong> <a href="http://www.kalax.on.ca/blog/" target="_blank">Blog</a> </strong> </li>
-						</ul>
 
 						<ul class="unstyled footer_menu">
 							<li> <strong> <?php echo $this->Html->link(__('Admin'), array('controller' => 'users', 'action' => 'login')); ?> </strong> </li>
+							<li> <strong> <a href="http://www.kalax.on.ca/reminder" target="_blank"> Reminder System</a> </strong> </li>
 						</ul>
 					</div>
 

@@ -46,10 +46,6 @@
 		<?php endforeach; ?>
 	</ul>
 
-	<?php echo $this->Html->link(__('More services'), array('controller' => 'services', 'action' => 'public_page'), array('class' => 'btn btn-mini pull-right')); ?>
-
-	<br>
-
 	<!-- <h4 class="title_border">
 		News
 	</h4>

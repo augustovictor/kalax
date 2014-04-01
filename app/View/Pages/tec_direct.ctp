@@ -29,8 +29,8 @@
 				</ul>
 				<p style="margin: 0px 5px">AND MANY MORE INDUSTRY LEADING COMPANIES<br><br></p>
 				<p style="margin: 0px 5px">
-					We can provide pre-assembled systems or a custom configuration for your personal needs. All of our Touch systems are Novell certified 
-					and backed by a three year limited warranty.<br><br>
+					We can provide pre-assembled systems or a custom configuration for your personal needs. All of our Lenovo systems are certified and backed by a three year limited warranty.
+					<br><br>
 				</p>
 
 			</div>

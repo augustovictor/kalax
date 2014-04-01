@@ -17,3 +17,6 @@
 		<li><?php echo $this->Html->link(__('List Uploads'), array('action' => 'index')); ?></li>
 	</ul>
 </div>
+
+<div id="progressbar"></div>
+<?=$ajax->progressbar('progressbar', array('value' => 37))?>
